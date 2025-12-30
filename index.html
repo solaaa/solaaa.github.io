@@ -1,1 +1,90 @@
-<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>my-vue-demo</title><script defer="defer" src="/js/chunk-vendors.018a282f.js"></script><script defer="defer" src="/js/app.50a25ff3.js"></script><link href="/css/app.09b3c5ea.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but my-vue-demo doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div></body></html>
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="/favicon.ico">
+    <title>my-vue-demo</title>
+    <script src="/config.js"></script>
+    <script defer="defer" src="/js/chunk-vendors.018a282f.js"></script>
+    <script defer="defer" src="/js/app.50a25ff3.js"></script>
+    <link href="/css/app.09b3c5ea.css" rel="stylesheet">
+    <style>
+      /* Mobile UI Adaptation */
+      @media (max-width: 768px) {
+        /* Layout: Sidebar Overlay */
+        #app {
+          position: relative;
+          width: 100vw;
+          overflow-x: hidden;
+        }
+
+        /* Sidebar: Absolute positioning to prevent squeezing chat */
+        .setting-panel[data-v-7f7128ed] {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          z-index: 1000;
+          box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Chat Container: Full width with space for collapsed sidebar */
+        .chat-container[data-v-d17ada74] {
+          width: 100% !important;
+          min-width: 100vw !important;
+          padding-left: 42px; /* Space for collapsed sidebar toggle */
+        }
+
+        /* Chat Area Adjustments */
+        .chat-messages[data-v-d17ada74] {
+          padding: 10px !important;
+        }
+
+        .message-content[data-v-d17ada74] {
+          padding: 10px !important;
+          gap: 10px !important;
+        }
+
+        /* Avatar size reduction */
+        .avatar[data-v-d17ada74] {
+          width: 28px !important;
+          height: 28px !important;
+        }
+
+        /* Input Area Adjustments */
+        .chat-input-container[data-v-d17ada74] {
+          padding: 10px 10px 18px !important;
+          min-height: auto !important;
+        }
+
+        .input-wrapper[data-v-d17ada74] {
+          padding: 10px !important;
+        }
+
+        .message-input[data-v-d17ada74] {
+          font-size: 16px !important; /* Prevent iOS zoom on focus */
+        }
+
+        /* Fix horizontal scrolling issues */
+        .message-text[data-v-d17ada74] {
+          width: 100%;
+          overflow-x: hidden;
+        }
+        
+        /* Ensure code blocks scroll internally */
+        pre, .code-block {
+          max-width: 100%;
+          overflow-x: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but my-vue-demo doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+  </body>
+</html>
